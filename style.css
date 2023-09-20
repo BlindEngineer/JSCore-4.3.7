@@ -1,0 +1,129 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, sans-serif;
+}
+
+input {
+    all: unset;
+}
+
+button,
+button:active,
+button:focus  {
+    border:none;
+    outline: none;
+}
+
+.app-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 660px;
+    background-color: #C4C4C4;
+    margin: 7vh auto auto;
+    padding: 62px 80px 72px;
+}
+
+.search-block__input {
+    display: block;
+    height: 61px;
+    background: #FFF;
+    width: calc(100% - 13px);
+    padding-left: 13px;
+    font-size: 48px;
+    font-weight: 400;
+}
+
+.search-block__input::placeholder {
+       font-size: 30px;
+    font-weight: 400;
+}
+
+.search-block__list, .result-block__list {
+    width: 100%;
+    list-style: none;
+}
+
+.search-block__item {
+    height: 44px;
+    border: 2px solid #000;
+    background: #E3E3E3;
+    border-bottom: none;
+}
+
+.search-block__item:last-child {
+    border-bottom: 2px solid #000;
+}
+
+.search-block__item-button {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #E3E3E3;
+    padding-left: 13px;
+    font-size: 30px;
+    font-weight: 400;
+    text-align: left;
+}
+
+.search-block__item-button:hover, .search-block__item-button:focus {
+    background: #65CDF9;
+    cursor: pointer;
+}
+
+.result-block__item {
+    border: 1px solid #000;
+    background: #E27BEB;
+    padding: 6px 13px;
+    border-bottom: none;
+    position: relative;
+}
+
+.result-block__item:first-child {
+    margin-top: 45px;
+}
+
+
+.result-block__item:last-child {
+    border-bottom: 1px solid #000;
+}
+
+.result-block__item > p {
+    font-size: 24px;
+    font-weight: 400;
+    max-width: 390px;
+    word-break: break-all;
+}
+
+.result-block__item-remove:hover, .result-block__item-remove:focus {
+    transform: scale(1.3);
+}
+
+.result-block__item-remove {
+    cursor: pointer;
+    border: none;
+    position: absolute;
+    right: 34px;
+    top: 30px;
+    width: 46px;
+    height: 42px;
+    background-color: #E27BEB;
+    background-image: url("./img/Vector-7.svg");
+    transition: transform 200ms ease-in;
+}
+
+.result-block__item-remove:after {
+    position: absolute;
+    content:'';
+    display: block;
+    right: 0;
+    top: 0;
+    width: 46px;
+    height: 42px;
+    background-color: transparent;
+    background-image: url("./img/Vector-8.svg");
+}
