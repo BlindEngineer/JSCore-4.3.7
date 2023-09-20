@@ -17,9 +17,9 @@ function getRepositories(inputData) {
         for (let i = 0; i < 5; i++) {
           arrayOfRepo.push(res.items[i]);
         }
-        optionsBlock.hidden = false;
+        // optionsBlock.hidden = false;
         // console.log(res);
-        // console.log(arrayOfRepo);
+        //console.log(arrayOfRepo);
         return (arrayOfRepo);
       })
       .then(() => changeAutocomplete())
@@ -32,7 +32,9 @@ function getRepositories(inputData) {
 function changeAutocomplete() {
   try {arrayOfRepo.map((repo, i) => {
     optionsButtons[i].textContent = repo.name;
-  })} catch (e) {
+  });
+    optionsBlock.hidden = false;
+  } catch (e) {
     console.log(e + '-так вышло');
   }
 }
